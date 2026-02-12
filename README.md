@@ -59,6 +59,26 @@ University  :   University of Dhaka
 
 ---
 
+## How to Compile and Run
+
+### Compilation
+```bash
+gcc -o analysis c_main.c econ_func.c stat_func.c -lm
+```
+(The `-lm` flag links the math library for `sqrt()`, `pow()`, etc.)
+
+### Execution
+```bash
+./analysis
+```
+
+The program will:
+1. Load world.csv and bangladesh.csv
+2. Run all 4 analyses
+3. Output comprehensive tables, statistics, and interpretations
+
+---
+
 ## Data Files
 
 ### world.csv
