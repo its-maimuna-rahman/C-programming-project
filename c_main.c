@@ -22,7 +22,7 @@ typedef struct {
     int billionaire_born;
 } CountryData;
 
-// Structure for Bangladesh time-series data
+// Structure for Bangladesh data
 typedef struct {
     int year;
     double gdp_per_capita;
@@ -502,9 +502,6 @@ void analysis4_BangladeshCaseStudy(BangladeshData bd_data[], int n) {
     printf("  Average Annual Wealth Growth: %.4f (%.2f%%)\n", mean_growth, mean_growth * 100);
     printf("  Average Drain Intensity: %.6f students per capita\n", mean_drain);
     
-    // Time series plot data (text-based visualization hint)
-    printf("\nNOTE: For visual analysis, plot Y (Drain Intensity) over years\n");
-    printf("      to see the trend of student outflow over time.\n");
 }
 
 // Main function
@@ -513,7 +510,7 @@ int main() {
     BangladeshData bd_data[MAX_YEARS];
     
     int num_countries = loadCountryData("world.csv", countries);
-    int num_years = loadBangladeshData("bangladesh.csv", bd_data);  // Fixed filename
+    int num_years = loadBangladeshData("bangladesh.csv", bd_data);
     
     if (num_countries <= 0) {
         printf("Error: Could not load country data from world.csv\n");
